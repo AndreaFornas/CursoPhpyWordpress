@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(240, 237, 237);
+}
+.nav_principal {
+    border-left: 1rem solid #388d55;
+    background-color: white;
+    padding: 2rem;
+}
+
+.nav_principal ul li{
+    list-style-type: none;
+    display: inline-block;
+
+}
+.nav_principal a {
+    text-decoration: none;
+    color: black;
+    padding: 1rem;
+}
+.contenido{
+
+    padding: 1rem;
+}
+.curso_1{
+    background-color: rgb(183, 231, 183);
+    padding: 1.5rem;
+}
+
+.curso_2{
+    background-color: rgb(245, 154, 239);
+    padding: 1.5rem;
+}
+
+.curso_total{
+    background-color: rgb(154, 184, 245);
+    padding: 1.5rem;
+}

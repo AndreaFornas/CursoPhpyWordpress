@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    
+        font-family: 'Roboto', sans-serif;
+        
+}
+
+.nav_principal {
+    border-left: 1rem solid #bb13e1;
+    background-color: rgb(236, 227, 227);
+    padding: 1rem;
+    
+}
+
+.nav_principal ul li {
+    list-style-type: none;
+    display: inline-block;
+
+}
+
+.nav_principal a {
+    text-decoration: none;
+    color: black;
+    padding: 1rem;
+}
+
+.contenido {
+
+    padding: 1rem;
+}
+.estilo_1{
+
+    margin: 2rem;
+
+
+}
+.curso_php{
+    
+    padding: 1.5rem;
+    margin: 2rem;
+}
+.curso_1 {
+    background-color: rgb(185, 216, 251);
+    padding: 1.5rem;
+    margin: 2rem;
+}
+
+.curso_2 {
+    background-color: rgb(237, 197, 247);
+    padding: 1.5rem;
+    margin: 2rem;
+}
+
+.curso_total {
+    background-color: rgb(195, 155, 244);
+    padding: 1.5rem;
+    margin: 2rem;
+}
+
+/*-------contacto--------*/
+
+.contacto_principal {
+
+    text-align: left;
+    margin: 2rem;
+    
+}
+
+.contacto_contenido {
+    margin: 1rem;
+    padding: 1rem;
+    width: 80%;
+    text-align: left;
+}
+
+.contacto_input {
+    width: 80%;
+    display: block;
+    margin: 0.5rem;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.contacto_btn {
+    width: 30%;
+    padding: 0.5rem;
+    padding: 0.5rem;
+    margin: 1rem;
+}
+.footer_1{
+
+    text-align: center;
+    background-color:rgb(236, 227, 227);
+    padding: 2rem;
+    margin: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+.contact-form-container {
+    width: 50%;
+    margin: 2rem;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+.contact-form label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+/*-------personajes--------*/
+.section-container-p {
+    width: 50%;
+    /*float: left;*/
+    display: inline-block;
+    border:rgba(0, 0, 0, 0.1) solid 1px;
+    padding: 2rem;
+    margin: 1rem;
+    
+    
+}
+
+.section-container-p h1{
+
+    padding-bottom: 1rem;
+}
+
+.section-container-p h3{
+
+    padding-bottom: 1rem;
+}
+
+.section-container {
+    width: 50%;
+    /*float: left;*/
+    border:rgba(0, 0, 0, 0.1) solid 1px;
+    padding: 2rem;
+    margin: 1rem;
+    
+    
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 1rem;
+}
+.section-description {
+    font-size: 16px;
+    margin: 10px 0;
+}
+.section-image {
+    max-width: 100%;
+    height: auto;
+}
+
+
+        ul {
+            list-style: none; /* Elimina los puntos de la lista */
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            margin: 10px 0; /* Espacio entre los elementos de la lista */
+        }
+        a {
+            text-decoration: none; /* Elimina el subrayado de los enlaces */
+            color: #007BFF; /* Color del enlace */
+            font-weight: bold; /* Texto en negrita */
+            padding: 10px 15px; /* Espacio alrededor del texto */
+            border-radius: 5px; /* Bordes redondeados */
+            transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+        }
+        a:hover {
+            background-color: #007BFF; /* Color de fondo al pasar el ratón */
+            color: #ffffff; /* Color del texto al pasar el ratón */
+        }
