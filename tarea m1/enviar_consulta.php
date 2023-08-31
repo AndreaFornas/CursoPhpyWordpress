@@ -1,4 +1,6 @@
 <?php
+require_once('config.php');
+
 $nombre_form = $_POST['nombre'];
 $apellido_form = $_POST['apellido'];
 $correo_form = $_POST['email'];
@@ -12,4 +14,18 @@ $cuerpo_mail =
 "Mensaje: ".$mensaje_form;
 
 mail("andreacfornas@gmail.com", "Mensaje enviado desde nuestro sitio", $cuerpo_mail);
+
+
+$conexion = mysqli_connect($local_host, $local_usuario, $local_pass, $local_base_de_datos);
+
+if (!$conexion){
+    die ("Error al conectar a la base de datos" . 
+    mysqli_error());
+}
+
+mysqli_query($conexion, "INSERT INTO formulario VALUES (DEFAULT, '$nombre_form', '$apellido_form', '$correo_form', '$mensaje_form')");
+
+mysqli_close($conexion);
+
+header("Location:contacto.php?ok");
 ?>

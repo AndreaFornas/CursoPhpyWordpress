@@ -22,6 +22,13 @@
             <button type="submit" value="Enviar consulta">Enviar</button>
         </form>
     </div>
+
+    <?php
+            if(isset ($_GET['ok'])){
+
+                echo "<h3>Su mensaje ha sido enviado con éxito</h3>";
+            }
+    ?>
     </section>
 </body>
 </html>
