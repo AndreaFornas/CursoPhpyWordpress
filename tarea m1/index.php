@@ -1,10 +1,9 @@
 <?php include("header.php") ?>
-
-
-    <?php
-    /* tarea 1: 
-
-
+<div class="image-surf">
+    <img src="./imagenes/tablas-paddle-surf-sup.jpg" alt="">
+</div>
+<?php
+/* tarea 1: 
     tarea 2:
     1. Implementá en tu proyecto el uso de variables para manejar distintos tipos de datos.
     2. Efectuá alguna operación con los datos y mostrá el resultado haciendo uso de una nueva variable.
@@ -15,8 +14,6 @@
         para que se envíe un mail que recupere la información del remitente.
         Para la actividad, sugiero registrarse en un host gratuito, por ejemplo 000webhost. Luego, suba los archivos y verifique la correcta implementación de lo solicitado.
         Enviar url proporcionada por el host.
-
-
        
         Tarea
         Actividad Integradora Obligatoria Módulo 1
@@ -34,74 +31,65 @@
         Implementar funciones del lenguaje (por ejemplo: mail)
        
                */
-    ?>
-
-
+?>
 
 <?php
 //comentario de una linea
 
-$titulo = "Desarrollo Web con PHP y Wordpress";
+$titulo = "Curso de Surf Paddel Inicial";
 $unidades_curso1 = 8;
-$arancel = 20356.2;
-$fecha = '10/12/23';
+$arancel = 10000;
+$fecha = '01/12/23';
 
-$curso_2 = "Programador Web Avanzado";
-$unidades_curso_2 = 5;
-$arancel_2 = 30506.5;
-$fecha_2 = '10/07/24';
+$curso_2 = "Curso de Surf Paddel Avanzado";
+$unidades_curso_2 = 6;
+$arancel_2 = 20000;
+$fecha_2 = '01/03/24';
+
+?>
+<?php
+$dolar = 490;
+$duraciontotal = $unidades_curso1 + $unidades_curso_2;
+$aranceltotal = $arancel + $arancel_2;
+$aranceldolar = $aranceltotal / $dolar;
 
 ?>
 
-
 <section class="contenido">
 
-    <div class="curso_php">
-        <h1>Diplomatura de Professional Backend Developer:</h1>
+   <!--  <div class="curso_surf">
+        <h1>Estos son nuestros cursos de paddle surf:</h1>
+    </div> -->
 
-    </div>
+    <table>
+        <tr>
+            <th></th>
+            <th><?php echo $titulo ?></th>
+            <th><?php echo $curso_2 ?></th>
+            <th>Full Paddle Surf</th>
+        </tr>
+        <tr>
+            <td>Duración (en semanas):</td>
+            <td><?php echo $unidades_curso1 ?></td>
+            <td><?php echo $unidades_curso_2 ?></td>
+            <td><?php echo $duraciontotal ?></td>
+        </tr>
+        <tr>
+            <td>Costo en pesos argentinos:</td>
+            <td><?php echo $arancel ?></td>
+            <td><?php echo $arancel_2 ?></td>
+            <td><?php echo $aranceltotal ?></td>
+        </tr>
+        <tr>
+            <td>Fecha de inicio:</td>
+            <td><?php echo $fecha ?></td>
+            <td><?php echo $fecha_2 ?></td>
+            <td><?php echo $fecha ?></td>
+        </tr>
+    </table>
 
 
 
-    <div class="curso_1">
-        <h2><?php echo $titulo ?></h2>
-        <ul>
-            <li>Duración: <?php echo $unidades_curso1 ?></li>
-            <li>Arancel: <?php echo $arancel ?></li>
-            <li>Fecha: <?php echo $fecha ?></li>
-
-        </ul>
-    </div>
-
-    <div class="curso_2">
-        <h2><?php echo $curso_2 ?></h2>
-        <ul>
-            <li>Duración: <?php echo $unidades_curso_2 ?></li>
-            <li>Arancel: <?php echo $arancel_2 ?></li>
-            <li>Fecha: <?php echo $fecha_2 ?></li>
-
-        </ul>
-    </div>
-
-    <?php
-    $dolar = 490;
-    $duraciontotal = $unidades_curso1 + $unidades_curso_2;
-    $aranceltotal = $arancel + $arancel_2;
-    $aranceldolar = $aranceltotal / $dolar;
-
-    ?>
-
-    <div class="curso_total">
-        <h2>Totales de la diplomatura:</h2>
-        <ul>
-            <li>Duración total: <?php echo $duraciontotal ?></li>
-            <li>Arancel total: <?php echo $aranceltotal ?></li>
-            <li>Arancel total en dolares: <?php echo round($aranceldolar) ?></li>
-            <li>Fecha: <?php echo $fecha ?></li>
-
-        </ul>
-
-    </div>
 
 </section>
 <?php include("footer.php"); ?>

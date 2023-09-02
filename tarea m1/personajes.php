@@ -31,6 +31,13 @@ if (isset($_GET['personaje'])) {
     }
 }
 ?>
+
+
+<div class="image-surf">
+    <img src="./imagenes/tablas-paddle-surf-sup.jpg" alt="">
+</div>
+
+
 <section>
     <div class="section-container-p">
 

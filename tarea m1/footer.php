@@ -1,5 +1,7 @@
-<footer class="footer_1">
-        Derechos reservados - Desarrollo web con php y wordpress
+
+
+    <footer class="footer">
+        <p class="footer-text">&copy; 2023 Surf Paddel Argentina</p>
     </footer>
 
 </body>

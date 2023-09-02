@@ -6,26 +6,43 @@ $apellido_form = $_POST['apellido'];
 $correo_form = $_POST['email'];
 $mensaje_form = $_POST['mensaje'];
 
+$cuerpo_mail =
+    "Nombre: " . $nombre_form . "\r\n" .
+    "Apellido: " . $apellido_form . "\r\n" .
+    "Correo electrónico: " . $correo_form . "\r\n" .
+    "Mensaje: " . $mensaje_form;
 
-$cuerpo_mail = 
-"Nombre: " .$nombre_form."\r\n".
-"Apellido: ".$apellido_form."\r\n".
-"Correo electrónico: ".$correo_form."\r\n".
-"Mensaje: ".$mensaje_form;
+$entorno = 'online'; //cambia esto a online
 
-mail("andreacfornas@gmail.com", "Mensaje enviado desde nuestro sitio", $cuerpo_mail);
+if ($entorno === 'local') {
+    $conexion = mysqli_connect("$local_host", "$local_usuario", "$local_pass", "$local_base_de_datos");
 
-
-$conexion = mysqli_connect($local_host, $local_usuario, $local_pass, $local_base_de_datos);
-
-if (!$conexion){
-    die ("Error al conectar a la base de datos" . 
-    mysqli_error());
+    if (!$conexion) {
+        die("Error al conectar a la base de datos:" .
+            mysqli_error());
+    }
+} else {
+    $conexion = mysqli_connect("$online_host", "$online_usuario", "$online_pass", "$online_base_de_datos");
+    if (!$conexion) {
+        die("Error al conectar a la base de datos" .
+            mysqli_error());
+    }
 }
+
+/*esto de anajo estaba comentado
+$conexion = mysqli_connect($local_host, $local_usuario, $local_pass, $local_base_de_datos);
+if (!$conexion) {
+    die("Error al conectar a la base de datos" .
+        mysqli_error());
+}
+*/
 
 mysqli_query($conexion, "INSERT INTO formulario VALUES (DEFAULT, '$nombre_form', '$apellido_form', '$correo_form', '$mensaje_form')");
 
 mysqli_close($conexion);
 
+mail("andreacfornas@gmail.com", "Mensaje enviado desde nuestro sitio", $cuerpo_mail);
+
 header("Location:contacto.php?ok");
-?>
+
+exit();

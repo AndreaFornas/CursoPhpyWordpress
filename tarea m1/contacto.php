@@ -1,7 +1,7 @@
 <?php include("header.php"); ?>
 
 <section class="contacto_contenido">
-<h2 class="contacto_principal">Formulario de contacto</h2>
+<h2 class="contacto_principal">Formulario de contacto:</h2>
 
 <div class="contact-form-container">
 
