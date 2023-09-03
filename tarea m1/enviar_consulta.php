@@ -15,23 +15,23 @@ $cuerpo_mail =
 mail("andreacfornas@gmail.com", "Mensaje enviado desde nuestro sitio", $cuerpo_mail);
 
 
-
-$entorno = 'online'; //cambia esto a online
+$entorno = 'local'; //cambia esto a online
 
 if ($entorno === 'local') {
     $conexion = mysqli_connect("$local_host", "$local_usuario", "$local_pass", "$local_base_de_datos");
 
     if (!$conexion) {
         die("Error al conectar a la base de datos:" .
-        mysqli_connect_error());
+            mysqli_connect_error());
     }
 } else {
     $conexion = mysqli_connect("$online_host", "$online_usuario", "$online_pass", "$online_base_de_datos");
     if (!$conexion) {
         die("Error al conectar a la base de datos" .
-        mysqli_connect_error());
+            mysqli_connect_error());
     }
 }
+
 
 
 /* $conexion = mysqli_connect($local_host, $local_usuario, $local_pass, $local_base_de_datos);
@@ -43,10 +43,11 @@ if (!$conexion) {
 
 mysqli_query($conexion, "INSERT INTO formulario VALUES (DEFAULT, '$nombre_form', '$apellido_form', '$correo_form', '$mensaje_form')");
 
+
+
 mysqli_close($conexion);
 
-
-
 header("Location:contacto.php?ok");
+
 
 exit();
