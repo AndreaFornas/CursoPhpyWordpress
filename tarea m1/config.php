@@ -2,7 +2,7 @@
 //configuracion entorno local
 $local_host = "localhost";
 $local_usuario = "root";
-$local_pass = "";
+$local_pass = "i*VT9gHA]53qXsbA";
 $local_base_de_datos = "desarrollo_web_php_wp";
 
 //configuracion en linea
