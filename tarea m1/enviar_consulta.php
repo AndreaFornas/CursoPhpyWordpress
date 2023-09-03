@@ -15,7 +15,7 @@ $cuerpo_mail =
 mail("andreacfornas@gmail.com", "Mensaje enviado desde nuestro sitio", $cuerpo_mail);
 
 
-$entorno = 'local'; //cambia esto a online
+$entorno = 'online'; //cambia esto a online
 
 if ($entorno === 'local') {
     $conexion = mysqli_connect("$local_host", "$local_usuario", "$local_pass", "$local_base_de_datos");
